@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profile - My Portfolio</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+body{
+  display:flex;
+  min-height:100vh;
+  background:linear-gradient(135deg,#3b0a0a,#6d0f0f);
+}
+
+/* ===== COLOR THEME ===== */
+:root{
+  --maroon:#7a0c0c;
+  --darkred:#4a0505;
+  --soft:#f5eaea;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:240px;
+  background:#fff;
+  border-right:1px solid var(--maroon);
+  padding:25px 20px;
+  position:fixed;
+  top:0;
+  left:0;
+  height:100vh;
+  overflow-y:auto;
+}
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:var(--maroon);
+  margin-bottom:30px;
+}
+.menu a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px;
+  color:#555;
+  text-decoration:none;
+  border-radius:8px;
+  margin-bottom:8px;
+}
+.menu a.active,
+.menu a:hover{
+  background:linear-gradient(135deg,var(--darkred),var(--maroon));
+  color:#fff;
+}
+
+/* ===== MAIN ===== */
+.main{
+  flex:1;
+  padding:40px;
+  margin-left:240px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+@keyframes zoomIn {
+  from{opacity:0; transform:scale(0.9);}
+  to{opacity:1; transform:scale(1);}
+}
+
+/* ===== PROFILE SECTION ===== */
+.profile-section{
+  background:#fff;
+  border-radius:20px;
+  padding:40px;
+  max-width:1000px;
+  margin:0 auto;
+  display:flex;
+  gap:30px;
+  align-items:flex-start;
+  box-shadow:0 10px 30px rgba(122,12,12,0.35);
+  animation: fadeUp .8s ease forwards;
+}
+
+/* FOTO */
+.profile-photo{
+  opacity:0;
+  animation: zoomIn .7s ease .3s forwards;
+}
+.profile-photo img{
+  width:220px;
+  border-radius:15px;
+}
+
+/* CARD DATA */
+.profile-card{
+  background:linear-gradient(135deg,var(--darkred),var(--maroon));
+  color:#fff;
+  padding:25px;
+  border-radius:15px;
+  width:260px;
+  line-height:1.8;
+  opacity:0;
+  animation: fadeUp .7s ease .45s forwards;
+}
+
+.profile-card h4{
+  font-weight:normal;
+  font-size:14px;
+  opacity:0.9;
+}
+.profile-card p{
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+/* DESCRIPTION */
+.profile-desc{
+  flex:1;
+  opacity:0;
+  animation: fadeUp .7s ease .6s forwards;
+}
+.profile-desc h3{
+  color:var(--maroon);
+  margin-bottom:5px;
+}
+.profile-desc h2{
+  font-size:32px;
+  margin-bottom:15px;
+  color:#333;
+}
+.profile-desc p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+.btn-cv{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--darkred),var(--maroon));
+  color:#fff;
+  padding:12px 30px;
+  border-radius:25px;
+  text-decoration:none;
+  transition:.2s;
+}
+.btn-cv:hover{
+  transform: translateY(-3px);
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
+.footer{
+  margin-top:30px;
+  text-align:center;
+  color:#ddd;
+  font-size:14px;
+  opacity:0;
+  animation: fadeUp .8s ease .8s forwards;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar">
+  <div class="logo">Portfolio</div>
+  <div class="menu">
+    <a href="index.html">🏠 Beranda</a>
+    <a href="profile.html" class="active">👤 Profil</a>
+    <a href="resume.html">📄 Resume</a>
+    <a href="portfolio.html">💼 Portofolio</a>
+    <a href="contact.html">✉️ Kontak</a>
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main">
+  <div class="profile-section">
+
+    <div class="profile-photo">
+      <img src="img/pps.jpeg" alt="profile">
+    </div>
+
+    <div class="profile-card">
+      <h4>Nama</h4>
+      <p>Tasya Nuraeni</p>
+      <h4>Tanggal Lahir</h4>
+      <p>25 Juni 2008</p>
+      <h4>Email</h4>
+      <p>tasyanuraeni1104@email.com</p>
+      <h4>No. HP</h4>
+      <p>087733505991</p>
+      <h4>Alamat</h4>
+      <p>Kab. Tasikmalaya, Kec. Puspahiang</p>
+    </div>
+
+    <div class="profile-desc">
+      <h3>Tentang Saya</h3>
+      <h2>Rekayasa Perangkat Lunak</h2>
+      <p>
+        Hallo Saya Tasya Nuraeni, Saya memiliki minat dan ketertarikan yang kuat dalam bidang teknologi dan pengembangan perangkat lunak. Saya terbiasa belajar hal baru dengan cepat, memiliki semangat belajar yang tinggi, serta mampu bertanggung jawab dalam menyelesaikan tugas dan proyek pemrograman. Saya terus berusaha mengembangkan kemampuan dalam coding, logika pemrograman, dan teknologi informasi, sehingga mampu beradaptasi dengan perkembangan dunia IT dan siap menghadapi tantangan di bidang RPL.
+      </p>
+      <a href="cv/cv.pdf" class="btn-cv">LIHAT CV</a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2025 Tasya Nuraeni
+  </div>
+</div>
+
+</body>
+</html>
