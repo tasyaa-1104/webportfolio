@@ -13,14 +13,21 @@
 body{
   display:flex;
   min-height:100vh;
-  background:linear-gradient(135deg,#ffe4ec,#f8bbd0);
+  background:linear-gradient(135deg,#3b0a0a,#6d0f0f);
+}
+
+/* ===== COLOR THEME ===== */
+:root{
+  --maroon:#7a0c0c;
+  --darkred:#4a0505;
+  --soft:#f5eaea;
 }
 
 /* ===== SIDEBAR ===== */
 .sidebar{
   width:240px;
   background:#fff;
-  border-right:1px solid #f3c6d3;
+  border-right:1px solid var(--maroon);
   padding:25px 20px;
   position:fixed;
   top:0;
@@ -31,7 +38,7 @@ body{
 .logo{
   font-size:22px;
   font-weight:bold;
-  color:#c2185b;
+  color:var(--maroon);
   margin-bottom:30px;
 }
 .menu a{
@@ -46,7 +53,7 @@ body{
 }
 .menu a.active,
 .menu a:hover{
-  background:linear-gradient(135deg,#f48fb1,#c2185b);
+  background:linear-gradient(135deg,var(--darkred),var(--maroon));
   color:#fff;
 }
 
@@ -59,25 +66,12 @@ body{
 
 /* ===== ANIMATION ===== */
 @keyframes fadeUp {
-  from{
-    opacity:0;
-    transform: translateY(30px);
-  }
-  to{
-    opacity:1;
-    transform: translateY(0);
-  }
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
 }
-
 @keyframes zoomIn {
-  from{
-    opacity:0;
-    transform: scale(0.9);
-  }
-  to{
-    opacity:1;
-    transform: scale(1);
-  }
+  from{opacity:0; transform:scale(0.9);}
+  to{opacity:1; transform:scale(1);}
 }
 
 /* ===== PROFILE SECTION ===== */
@@ -90,7 +84,7 @@ body{
   display:flex;
   gap:30px;
   align-items:flex-start;
-  box-shadow:0 10px 25px rgba(194,24,91,0.15);
+  box-shadow:0 10px 30px rgba(122,12,12,0.35);
   animation: fadeUp .8s ease forwards;
 }
 
@@ -106,7 +100,7 @@ body{
 
 /* CARD DATA */
 .profile-card{
-  background:linear-gradient(135deg,#f48fb1,#c2185b);
+  background:linear-gradient(135deg,var(--darkred),var(--maroon));
   color:#fff;
   padding:25px;
   border-radius:15px;
@@ -121,7 +115,6 @@ body{
   font-size:14px;
   opacity:0.9;
 }
-
 .profile-card p{
   font-weight:bold;
   margin-bottom:12px;
@@ -133,18 +126,15 @@ body{
   opacity:0;
   animation: fadeUp .7s ease .6s forwards;
 }
-
 .profile-desc h3{
-  color:#c2185b;
+  color:var(--maroon);
   margin-bottom:5px;
 }
-
 .profile-desc h2{
   font-size:32px;
   margin-bottom:15px;
   color:#333;
 }
-
 .profile-desc p{
   color:#666;
   line-height:1.8;
@@ -154,7 +144,7 @@ body{
 /* BUTTON */
 .btn-cv{
   display:inline-block;
-  background:linear-gradient(135deg,#f48fb1,#c2185b);
+  background:linear-gradient(135deg,var(--darkred),var(--maroon));
   color:#fff;
   padding:12px 30px;
   border-radius:25px;
@@ -170,7 +160,7 @@ body{
 .footer{
   margin-top:30px;
   text-align:center;
-  color:#999;
+  color:#ddd;
   font-size:14px;
   opacity:0;
   animation: fadeUp .8s ease .8s forwards;
@@ -193,40 +183,31 @@ body{
 
 <!-- ===== MAIN CONTENT ===== -->
 <div class="main">
-
   <div class="profile-section">
 
-    <!-- FOTO -->
     <div class="profile-photo">
       <img src="img/pps.jpeg" alt="profile">
     </div>
 
-    <!-- CARD DATA -->
     <div class="profile-card">
       <h4>Nama</h4>
       <p>Tasya Nuraeni</p>
-
       <h4>Tanggal Lahir</h4>
       <p>25 Juni 2008</p>
-
       <h4>Email</h4>
       <p>tasyanuraeni1104@email.com</p>
-
       <h4>No. HP</h4>
       <p>087733505991</p>
-
       <h4>Alamat</h4>
       <p>Kab. Tasikmalaya, Kec. Puspahiang</p>
     </div>
 
-    <!-- DESKRIPSI -->
     <div class="profile-desc">
       <h3>Tentang Saya</h3>
       <h2>Rekayasa Perangkat Lunak</h2>
       <p>
         Hallo Saya Tasya Nuraeni, Saya memiliki minat dan ketertarikan yang kuat dalam bidang teknologi dan pengembangan perangkat lunak. Saya terbiasa belajar hal baru dengan cepat, memiliki semangat belajar yang tinggi, serta mampu bertanggung jawab dalam menyelesaikan tugas dan proyek pemrograman. Saya terus berusaha mengembangkan kemampuan dalam coding, logika pemrograman, dan teknologi informasi, sehingga mampu beradaptasi dengan perkembangan dunia IT dan siap menghadapi tantangan di bidang RPL.
       </p>
-
       <a href="cv/cv.pdf" class="btn-cv">LIHAT CV</a>
     </div>
 
@@ -235,7 +216,6 @@ body{
   <div class="footer">
     © 2025 Tasya Nuraeni
   </div>
-
 </div>
 
 </body>
